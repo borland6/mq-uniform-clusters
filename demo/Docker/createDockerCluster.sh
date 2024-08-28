@@ -72,8 +72,8 @@ $CMDDOCKER run \
   --env MQ_QMGR_NAME=QM1 \
   --env MQ_ENABLE_METRICS=true \
   --volume qm1UCdata:/mnt/mqm \
-  --volume $scriptDir/QMConfig/dockerVolume/AutoCluster.ini:/etc/mqm/AutoCluster.ini \
-  --volume $scriptDir/QMConfig/dockerVolume/UniCluster.mqsc:/etc/mqm/UniCluster.mqsc \
+  --volume $scriptDir/QMConfig/dockerVolume/AutoCluster.ini:/etc/mqm/AutoCluster.ini:z \
+  --volume $scriptDir/QMConfig/dockerVolume/UniCluster.mqsc:/etc/mqm/UniCluster.mqsc:z \
   --publish 1411:1414 --publish 9441:9443 \
   --network mqnetwork --network-alias QM1 \
   --detach --name QM1 icr.io/ibm-messaging/mq:latest
@@ -85,8 +85,8 @@ $CMDDOCKER run \
   --env MQ_QMGR_NAME=QM2 \
   --env MQ_ENABLE_METRICS=true \
   --volume qm2UCdata:/mnt/mqm \
-  --volume $scriptDir/QMConfig/dockerVolume/AutoCluster.ini:/etc/mqm/AutoCluster.ini \
-  --volume $scriptDir/QMConfig/dockerVolume/UniCluster.mqsc:/etc/mqm/UniCluster.mqsc \
+  --volume $scriptDir/QMConfig/dockerVolume/AutoCluster.ini:/etc/mqm/AutoCluster.ini:z \
+  --volume $scriptDir/QMConfig/dockerVolume/UniCluster.mqsc:/etc/mqm/UniCluster.mqsc:z \
   --publish 1412:1414 --publish 9442:9443 \
   --network mqnetwork --network-alias QM2 \
   --detach --name QM2 icr.io/ibm-messaging/mq:latest
@@ -98,8 +98,8 @@ $CMDDOCKER run \
   --env MQ_QMGR_NAME=QM3 \
   --env MQ_ENABLE_METRICS=true \
   --volume qm3UCdata:/mnt/mqm \
-  --volume $scriptDir/QMConfig/dockerVolume/AutoCluster.ini:/etc/mqm/AutoCluster.ini \
-  --volume $scriptDir/QMConfig/dockerVolume/UniCluster.mqsc:/etc/mqm/UniCluster.mqsc \
+  --volume $scriptDir/QMConfig/dockerVolume/AutoCluster.ini:/etc/mqm/AutoCluster.ini:z \
+  --volume $scriptDir/QMConfig/dockerVolume/UniCluster.mqsc:/etc/mqm/UniCluster.mqsc:z \
   --publish 1413:1414 --publish 9443:9443 \
   --network mqnetwork --network-alias QM3 \
   --detach --name QM3 icr.io/ibm-messaging/mq:latest
